@@ -1,0 +1,26 @@
+print("------------------------------------")
+print("   STUDENT GRADE TRACKER")
+print("------------------------------------")
+a=str(input("ENTER STUDENT NAME :"))
+b=int(input("ENTER NUMBER OF SUBJECTS :"))
+c=[]
+for i in range(1,b+1):
+	n=float(input(f"ENTER  GRADE POINT FOR SUBJECT {i} :"))
+	c.append(n)
+g=round((sum(c)/b),2)
+print("AVERAGE GRADE POINT :",g)
+print("OVERALL PERCENTAGE :",round(g*10,2))
+if g>=9.0 and g<=10.0:
+	print("OVERALL GRADE :A+")
+elif g>=8.0 and g<=8.9:
+	print("OVERALL GRADE :A")
+elif g>=7.0 and g<=7.9:
+	print("OVERALL GRADE :B+")
+elif g>=6.0 and g<=6.9:
+	print("OVERALL GRADE :B")
+elif g>=5.0 and g<=5.9:
+	print("OVERALL GRADE :C")
+elif g<4.9:
+	print("OVERALL GRADE :D")
+else:
+	print("INVALID GRADE POINT")
